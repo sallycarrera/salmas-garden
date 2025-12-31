@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #faf7f2;
+  height: 100vh;
+  font-family: 'Cormorant Garamond', serif;
+  overflow: hidden;
+}
+
+/* Center the note */
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Note styling */
+.note {
+  font-size: 26px;
+  line-height: 1.6;
+  text-align: center;
+  color: #4a3f35;
+  opacity: 0;
+  animation: fadeIn 3s ease forwards;
+}
+
+/* Flowers */
+.flower {
+  position: absolute;
+  width: 180px;
+  opacity: 0.7;
+}
+
+.flower-top {
+  top: -20px;
+  left: -20px;
+}
+
+.flower-bottom {
+  bottom: -30px;
+  right: -30px;
+}
+
+/* Soft fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
