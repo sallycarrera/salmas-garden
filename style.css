@@ -29,39 +29,7 @@ body {
   animation: fadeIn 3s ease forwards;
 }
 
-/* Flowers */
-/* Flowers */
-.flower {
-  position: absolute;
-  width: 180px;
-  opacity: 0.7;
-  animation: float 10s ease-in-out infinite;
-}
-
-.flower-top {
-  top: -20px;
-  left: -20px;
-  animation-delay: 0s;
-}
-
-.flower-bottom {
-  bottom: -30px;
-  right: -30px;
-  animation-delay: 4s;
-}
-
-
-.flower-top {
-  top: -20px;
-  left: -20px;
-}
-
-.flower-bottom {
-  bottom: -30px;
-  right: -30px;
-}
-
-/* Soft fade-in animation */
+/* Fade-in animation for note */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -73,14 +41,57 @@ body {
   }
 }
 
+/* CSS Flower */
+.flower {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  animation: float 12s ease-in-out infinite;
+}
+
+.flower span {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #e8c7d3;
+  border-radius: 50%;
+  top: 40px;
+  left: 40px;
+}
+
+/* Petals */
+.flower span:nth-child(1) { transform: translateY(-40px); }
+.flower span:nth-child(2) { transform: translateX(40px); }
+.flower span:nth-child(3) { transform: translateY(40px); }
+.flower span:nth-child(4) { transform: translateX(-40px); }
+.flower span:nth-child(5) {
+  width: 30px;
+  height: 30px;
+  background: #d4a5b5;
+  top: 45px;
+  left: 45px;
+}
+
+/* Flower positions */
+.flower-top {
+  top: 20px;
+  left: 20px;
+}
+
+.flower-bottom {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Floating animation */
 @keyframes float {
   0% {
-    transform: translateY(0) rotate(0deg);
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(-15px) rotate(1deg);
+    transform: translateY(-12px);
   }
   100% {
-    transform: translateY(0) rotate(0deg);
+    transform: translateY(0);
   }
 }
