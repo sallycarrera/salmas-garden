@@ -30,11 +30,26 @@ body {
 }
 
 /* Flowers */
+/* Flowers */
 .flower {
   position: absolute;
   width: 180px;
   opacity: 0.7;
+  animation: float 10s ease-in-out infinite;
 }
+
+.flower-top {
+  top: -20px;
+  left: -20px;
+  animation-delay: 0s;
+}
+
+.flower-bottom {
+  bottom: -30px;
+  right: -30px;
+  animation-delay: 4s;
+}
+
 
 .flower-top {
   top: -20px;
@@ -55,5 +70,17 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
   }
 }
